@@ -6,17 +6,14 @@ import {Display} from "./Display";
 type CounterPropsType = {
     minCount: number
     maxCount: number
-    disButtons: boolean
-    activeCounter: boolean
-    errorSetCount: boolean
-    changeShowCountInit:(x:boolean)=>void
+    changeShowCountInit: (x: boolean) => void
 
 }
 
 function Counter(props: CounterPropsType) {
     let [count, setCount] = useState<number>(props.minCount)
-    let disInt = (count === props.maxCount)  || !props.activeCounter
-    let disReset = (count === props.minCount) || !props.activeCounter
+    let disInt = (count === props.maxCount)
+    let disReset = (count === props.minCount)
     let changeCount = () => {
         if (count < props.maxCount) {
             setCount(count + 1)
@@ -27,7 +24,7 @@ function Counter(props: CounterPropsType) {
         setCount(props.minCount)
     }
     let resetCount = () => setCount(props.minCount)
-    let  changeShowCountInit=()=>props.changeShowCountInit(false)
+    let changeShowCountInit = () => props.changeShowCountInit(false)
 
 
     return (
@@ -36,11 +33,8 @@ function Counter(props: CounterPropsType) {
 
                 <div className="Counter">
                     <div className="Display">
-                        {props.errorSetCount ?
-                            <div className="error">Incorrect value</div>
-                            : props.activeCounter ? <Display
-                                    count={count} maxCount={props.maxCount}/>
-                                : <div className="display2">Enter values and pres SET</div>}
+                        <Display count={count} maxCount={props.maxCount}/>
+
                     </div>
                     <div className="displayButton">
                         <ButtonComponent
@@ -61,7 +55,7 @@ function Counter(props: CounterPropsType) {
                         />
 
                         <ButtonComponent
-                            dis={true}
+                            dis={false}
                             id={3}
                             title={"SET"}
                             changeCount={changeShowCountInit}
