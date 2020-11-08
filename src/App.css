@@ -1,38 +1,104 @@
+body {
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
 .App {
-  text-align: center;
+    text-align: center;
+    margin: 100px auto;
+    color: #282c34;
+    border-radius: 10px;
+    border: 2px solid #67bcc6;
+    padding: 5px;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.error {
+    font-size: 25px;
+    color: red;
+    height: 50px;
+    background-color: #282c34;
+    border-radius: 8px;
+    border: 2px solid #67bcc6;
+    padding: 5px;
+    font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.display {
+    font-size: 25px;
+    color: #67bcc6;
+    height: 50px;
+    background-color: #282c34;
+    border-radius: 8px;
+    border: 2px solid #67bcc6;
+    padding: 5px;
+    font-weight: bold;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.display2 {
+
+    font-size: 16px;
+    color: #67bcc6;
+    height: 50px;
+    background-color: #282c34;
+    border-radius: 8px;
+    border: 2px solid #67bcc6;
+    padding: 5px;
+    font-weight: bold;
+
+
 }
 
-.App-link {
-  color: #61dafb;
+.displayButton {
+    position: relative;
+
+
+    border-radius: 8px;
+    border: 2px solid #67bcc6;
+    padding: 5px;
+    margin-top: 5px;
+    padding: 10px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button {
+    color: #282c34;
+    border-radius: 8px;
+    border: 2px solid #67bcc6;
+    padding: 5px;
+    margin: 0 20px;
+    font-weight: bold;
+    background-color: #67bcc6
+
+}
+
+.buttonDisabled {
+    color: #282c34;
+    border-radius: 8px;
+    border: 2px solid #67bcc6;
+    padding: 5px;
+    margin: 0 20px;
+    font-weight: bold;
+
+    background-color: #1a454c;
+}
+.input-field{
+    margin: 5px;
+}
+.input{
+    border: 2px solid #67bcc6;
+    width: 50px;
+    margin-left: 10px;
+}
+.input-error{
+    border: 2px solid #67bcc6;
+    width: 50px;
+    margin-left: 10px;
+    background-color: #e05d5d
 }
